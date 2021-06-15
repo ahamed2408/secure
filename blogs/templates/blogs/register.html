@@ -1,0 +1,115 @@
+{% extends "blogs/base.html" %}
+{% block content %}
+<style>
+  h6{
+    color: white;
+
+  }
+</style>
+
+<body>
+
+      <div class="col-md-8">
+        <center><h3>&emsp;&emsp;&emsp;&emsp;SeaLanes Shipping Co. - Order Registration</h3></center>
+        <br>
+
+    <div class="card bg-dark" style=" width: 850px; border-radius:30px;">
+      <center>
+    <form class="px-4 py-3" action="/register/" method="POST" style="width: 700px; display:inline-block;">
+      {%csrf_token%}
+        <br>
+        <div class="form-group">
+          <h6 style="text-align: left;">Sender Name:</h6> 
+          <input type="text" class="form-control"  placeholder="Sender Name" name="sen_name">
+        </div>
+
+        <div class="form-group">
+            <h6 style="text-align: left;">Sender Address:</h6> 
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="sen_add"></textarea>
+        </div>
+
+        <div class="form-group">
+          <h6 style="text-align: left;"><label for="exampleFormControlTextarea1">Sender Phone</label></h6>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Sender's Phone Number" name="sen_ph">
+        </div>
+      
+        <div class="form-group">
+          <h6 style="text-align: left;"><label for="exampleFormControlInput1">Reciever Name</label></h6>
+            <input type="text" class="form-control"  placeholder="Reciever Name" name="rec_name">
+        </div>
+
+        <div class="form-group">
+          <h6 style="text-align: left;"><label for="exampleFormControlTextarea1">Reciever Address</label></h6>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="rec_add"></textarea>
+        </div>
+
+        <div class="form-group">
+          <h6 style="text-align: left;"><label for="exampleFormControlTextarea1">Reciever Phone</label></h6>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Reciever's Phone Number" name="rec_ph">
+        </div>
+
+        <div class="form-group">
+          <h6 style="text-align: left;"><label for="exampleFormControlSelect1">Type Of Goods</label></h6>
+          <select class="form-control" id="exampleFormControlSelect1" name="t_g">
+            <option>Eatables</option>
+            <option>Solids</option>
+            <option>Fluids</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <h6 style="text-align: left;"><label for="exampleFormControlSelect1">Weight Of Goods</label></h6>
+          <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Enter value between(1-100)" name="weight" min="1" max="100">
+        </div>
+
+        <div class="form-group">
+          <h6 style="text-align: left;"><label for="exampleFormControlSelect1">Orgin</label></h6>
+            <select class="form-control" id="exampleFormControlSelect1" name="orgin">
+              <option>Miami</option>
+              <option>Cape Town</option>
+              <option>Chennai</option>
+              <option>Osaka</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+          <h6 style="text-align: left;"><label for="exampleFormControlSelect1">Destination</label></h6>
+            <select class="form-control" id="exampleFormControlSelect1" name="dest">
+              <option>Miami</option>
+              <option>Cape Town</option>
+              <option>Chennai</option>
+              <option>Osaka</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+          <h6 style="text-align: left;"><label for="exampleFormControlSelect1">Priority</label></h6>
+            <select class="form-control" id="exampleFormControlSelect1" name="pri">
+                <option>Urgent</option>
+                <option>Ordinary</option>
+            </select>
+        </div>
+
+
+
+        <div class="form-group">
+          <a class="nav-item nav-link" href="{% url 'blogs-register-2' %}"><button type="submit" class="btn btn-default" >Next</button></a>
+        </div>
+      
+      </form>
+    </center>
+    </div>
+
+    </div>
+</body>
+{% endblock content %}
+
+<!--div>
+          {% if contexts %}
+            <select class="form-control" id="exampleFormControlSelect1" name="dest">
+              {% for i in contexts %}<option>{{i.id}}</option>{%endfor%}
+            </select>
+          {% endif %}
+        </div>
+
+</div>
