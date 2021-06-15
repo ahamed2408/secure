@@ -295,9 +295,6 @@ def add(request):
         return render(request, 'blogs/register.html',{'contexts':contexts,'contextss':contextss})
 
 def dashboard(request):
-    #student_obj = Desii.objects.get(id=Desii.objects.last().id)
-    #student_obj.cost= 710
-    #student_obj.save()
 # For paasing the weight of goods in chartJS
     l={'con_e':0,'con_f':0,'con_s':0}
     for i in shipd.objects.all():
