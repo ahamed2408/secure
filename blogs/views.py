@@ -456,7 +456,7 @@ def dashboard(request):
     l4=shipd(shipid=48,shname='OCH-104',shorig='Osaka',shdest='Chennai',shdate=l4d,con_e=0,con_f=0,con_s=0)
     l4.save()
 
-    return render(request, 'blogs/dashboard.html', {'to':a,'bur':Keymax,'r':r,'b':b,'c':c,'e':e,'ces':ces,'cfs':cfs,'css':css,'aa':aa,'bb':bb,'cc':cc,'dd':dd,'ee':ff,'gg':gg,'hh':hh,'ii':ii,'jj':jj,'kk':kk,'ll':ll,'lo':lo,'ld':ld,'ct':ct,'cu':cu,'labels':labels,'data':data})
+    return render(request, 'blogs/dashboard.html')
 
 
 
