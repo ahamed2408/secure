@@ -380,9 +380,6 @@ def dashboard(request):
         
 
 
-    student_obj = orderss.objects.get(id=orderss.objects.last().id)
-    loo=student_obj.id
-
     labels = []
     data = []
     for i in orderss.objects.all():
