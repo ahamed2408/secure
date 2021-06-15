@@ -41,6 +41,30 @@ class orderss(models.Model):
     ddd = models.CharField(max_length=100,null= True, blank=True)
     date=models.DateField(auto_now=True)
 
+class analytics(models.Model):
+    OrderID=models.IntegerField()
+    Odate=models.DateField()
+    DayofMonth=models.IntegerField()
+    Month=models.IntegerField()
+    Year=models.IntegerField()
+    Quarter=models.IntegerField()
+    DayofWeek=models.IntegerField()
+    DayofYear=models.IntegerField()
+    WeekofYear=models.IntegerField()
+    Sender = models.CharField(max_length=100, null= True, blank=True)
+    Senderphone = models.CharField(max_length=100, null= True, blank=True)
+    Receiver = models.CharField(max_length=100, null= True, blank=True)
+    Receiverphone = models.CharField(max_length=100, null= True, blank=True)
+    Origin = models.CharField(max_length=100,null= True, blank=True)
+    Destination = models.CharField(max_length=100,null= True, blank=True)
+    Typeofgoods = models.CharField(max_length=100, null= True, blank=True)
+    Weight=models.IntegerField()   
+    Priority = models.CharField(max_length=100,null= True, blank=True)
+    Rej=models.IntegerField()
+    NoofShipDays=models.IntegerField()
+    Cost=models.IntegerField()
+    ShipID=models.IntegerField()
+
 
 
 
