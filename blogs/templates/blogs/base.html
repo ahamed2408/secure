@@ -29,16 +29,21 @@
           <div class="collapse navbar-collapse" id="navbarToggle">
             <div class="navbar-nav mr-auto">
               <a class="nav-item nav-link" href="{% url 'blogs-home' %}">Home</a>
-          
+              {% if user.is_authenticated %}
               <a class="nav-item nav-link" href="{% url 'blogs-register' %}">Register</a>
               <a class="nav-item nav-link" href="{% url 'blogs-dashboard' %}">Dashboard</a>
               <a class="nav-item nav-link" href="{% url 'blogs-dashboard-2' %}">Dashboard-2</a>
               <a class="nav-item nav-link" href="{% url 'blogs-free' %}">Manage Ships</a>
-
+              {% endif %}
             </div>
             <!-- Navbar Right Side -->
             <div class="navbar-nav">
-
+              {% if user.is_authenticated %}
+                <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
+              {% else %}
+                <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
+                <!--a class="nav-item nav-link" href="{% url 'registers' %}">Register</a-->
+              {% endif %}
             </div>
           </div>
         </div>
