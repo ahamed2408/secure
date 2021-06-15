@@ -296,7 +296,6 @@ def add(request):
 
 def dashboard(request):
 # For paasing the weight of goods in chartJS
-    a=orderss.objects.all().delete()
     l={'con_e':0,'con_f':0,'con_s':0}
     for i in shipd.objects.all():
         l['con_e']+=i.con_e
