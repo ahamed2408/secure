@@ -337,11 +337,11 @@ header .overlay {
 <br>
 <br>
 <div class="container" >
-    <h5 style="color:White;">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Revenue over Time &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Ship-wise Weights</h5>
+    <h5 style="color:White;">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Revenue over Time 
 </div>
 
 <div class="row">
-
+<center>
     <div class="col-md-5">
         <canvas id="dashboard" width="400" height="400"></canvas>
     <script>
@@ -407,89 +407,7 @@ header .overlay {
     </script>
 
 </div>
-
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-
-<div class="col-md-5">
-    <canvas id="myChart4" width="400" height="400"></canvas>
-<script>
-var ctx = document.getElementById('myChart4').getContext('2d');
-var myChart = new Chart(ctx, {
-    type: 'horizontalBar',
-    
-    data: {
-        labels:['MCP-107','MCH-104','MO-103','CPM-106','CPCH-110','CPO-112','CHM-105','CHCP-109','CHO-114','OM-102','OCP-111','OCH-113'] ,
-        datasets: [{
-            label: "Shipwise Weight" ,
-            data:[{{aa}},{{bb}},{{cc}},{{dd}},{{ee}},{{ff}},{{gg}},{{hh}},{{ii}},{{jj}},{{kk}},{{ll}}],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)'
-            
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-            ],
-            borderWidth: 1
-        }]
-    },
-
-    options: {
-        legend:{
-            display: false,
-        },
-
-        scales: {
-            xAxes: [{ 
-                gridLines: {
-                    display: true,
-                },
-                ticks: {
-                  fontColor: "white", // this here
-                },
-            }],
-
-            yAxes: [{ 
-                gridLines: {
-                    display: true,
-                },
-                ticks: {
-                  fontColor: "white", // this here
-                },
-            }],
-
-
-            y: {
-                beginAtZero: true
-                
-            }
-        }
-    }
-});
-</script>
-</div>
-
+</center>
 
 </div>
 
