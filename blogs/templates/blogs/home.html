@@ -274,9 +274,11 @@
 
 </style>
 <div class="col-md-8">
-  
-  {%if contexts %}
-    {% for dess in contexts %}
+{%if num%}
+  {% for j in num%}
+    {%if contexts %}
+      {% for dess in contexts %}
+      {% if dess.id == j %}
 
       {% if dess.rej == 0 %}
         <article class="media content-section bg-Secondary" style="background: linear-gradient(135deg, #23bdb8 0%, #43e794 100%) !important;">
@@ -356,12 +358,14 @@
                     
           </div>
       </article>
-
-    {% endfor %}
+      {% endif %}
+      {% endfor %}
 
     
     
-  {% endif %} 
+    {% endif %} 
+  {% endfor %}
+{% endif %}
 
 
 

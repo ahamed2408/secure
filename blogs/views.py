@@ -163,7 +163,10 @@ def home(request):
     }
     contexts=context['des']
     contextss=context['shi']
-    return render(request, 'blogs/home.html', {'contexts':contexts,'contextss':contextss})
+    lastnum=orderss.objects.last()
+    lid=lastnum.id
+    lid+=1
+    return render(request, 'blogs/home.html', {'contexts':contexts,'contextss':contextss,'num':range(1,lid)})
 
 
 def add(request):
