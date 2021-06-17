@@ -2,10 +2,6 @@ from django.db import models
 
 # Create your models here.
 
-
-
-
-
 class shipd(models.Model):
     shipid=models.IntegerField()
     shname = models.CharField(max_length=100, null= True, blank=True)
