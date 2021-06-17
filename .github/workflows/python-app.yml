@@ -14,17 +14,7 @@ jobs:
   build:
 
     runs-on: windows-latest
-
-    services:
-      postgres:
-        image: postgres:10.17
-        env:
-          POSTGRES_USER: wtikehgsaawspm
-          POSTGRES_PASSWORD: 853d155860e702fdab2725cddd1759b245ed2a0336c0bce80f332a3c25212ee1
-          POSTGRES_DB: deo2h6rl5cjn11
-        ports:
-          - 5432:5432
-
+    
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python 3.9
