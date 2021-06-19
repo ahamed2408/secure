@@ -301,10 +301,11 @@ def add(request):
         h6=(int(datetime.date(int(h[0]),int(h[1]),int(h[2])).strftime("%W"))) #Weekofyear   
         h7=(datetime.datetime.strptime(str(con.date), '%Y-%m-%d').weekday()+1) #Dayofweek
         h8=(datetime.datetime.strptime(str(con.date),'%Y-%m-%d').timetuple().tm_yday) #Dayofyear
-        a=con.id+1
+        a=con.id
+        yy=analytics.objects.last()
         y=analytics(
-            id=a,
-            OrderID=a,
+            id=yy.id+1,
+            OrderID=yy.id+1,
             Odate=con.date,
             DayofMonth=h2,
             Month=h3,
