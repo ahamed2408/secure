@@ -297,7 +297,7 @@ def add(request):
         h2=int(h[2]) #dayofmonth
         h3=int(h[1]) #Month num
         h4=int(h[0]) #Year
-        h5=int((h[1])-1)//3+1 #Quarter
+        h5=(int(h[1])-1//3)+1 #Quarter
         h6=(int(datetime.date(int(h[0]),int(h[1]),int(h[2])).strftime("%W"))) #Weekofyear   
         h7=(datetime.datetime.strptime(con.date, '%d-%m-%Y').weekday()+1) #Dayofweek
         h8=(datetime.datetime.strptime(con.date,'%d-%m-%Y').timetuple().tm_yday) #Dayofyear
