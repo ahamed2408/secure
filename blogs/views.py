@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect
 from django.urls import reverse
 from django.http import HttpResponseRedirect
-from .models import orderss, shipd
+from .models import analytics, orderss, shipd
 from datetime import datetime,date
 from django.core.mail import send_mail
 import datetime
@@ -291,6 +291,39 @@ def add(request):
         
         x=orderss(sen_name = sen_n , sen_add = sen_a , sen_ph = sen_p ,rec_name = rec_n , rec_add = rec_a , rec_ph = rec_p , t_g = tg, orgin = org, dest = d, pri = p, nodays=shipsd, weight=w,  rej=ro, cost=c, shipid=sid,dd=d1,dm=d2,dy=d3,ddd=d4)
         x.save()
+        con=orderss.objects.last()
+        h=con.date.split('-')
+        h2=int(h[2]) #dayofmonth
+        h3=int(h[1]) #Month num
+        h4=int(h[0]) #Year
+        h5=int((h[1])-1)//3+1 #Quarter
+        h6=(int(datetime.date(int(h[0]),int(h[1]),int(h[2])).strftime("%W"))) #Weekofyear   
+        h7=(datetime.datetime.strptime(con.date, '%d-%m-%Y').weekday()+1) #Dayofweek
+        h8=(datetime.datetime.strptime(con.date,'%d-%m-%Y').timetuple().tm_yday) #Dayofyear
+        y=analytics(
+            OrderID=con.id,
+            Odate=con.date,
+            DayofMonth=h2,
+            Month=h3,
+            Year=h4,
+            Quarter=h5,
+            DayofWeek=h7,
+            DayofYear=h8,
+            WeekofYear=h6,
+            Sender = sen_n,
+            Senderphone = sen_p,
+            Receiver = rec_n,
+            Receiverphone = rec_p,
+            Origin = org,
+            Destination = d,
+            Typeofgoods = tg,
+            Weight=w,   
+            Priority = p,
+            Rej=ro,
+            NoofShipDays=shipsd,
+            Cost=c,
+            ShipID=sid
+        )
 
         return redirect('blogs-register-2')
         return render(request, 'blogs/register-2.html')
