@@ -301,8 +301,9 @@ def add(request):
         h6=(int(datetime.date(int(h[0]),int(h[1]),int(h[2])).strftime("%W"))) #Weekofyear   
         h7=(datetime.datetime.strptime(str(con.date), '%Y-%m-%d').weekday()+1) #Dayofweek
         h8=(datetime.datetime.strptime(str(con.date),'%Y-%m-%d').timetuple().tm_yday) #Dayofyear
-        a=con.id
+        a=con.id+1
         y=analytics(
+            id=a,
             OrderID=a,
             Odate=con.date,
             DayofMonth=h2,
