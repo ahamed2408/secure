@@ -325,6 +325,7 @@ def add(request):
             Cost=c,
             ShipID=sid
         )
+        y.save()
 
         return redirect('blogs-register-2')
         return render(request, 'blogs/register-2.html')
