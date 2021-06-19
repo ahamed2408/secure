@@ -292,7 +292,8 @@ def add(request):
         x=orderss(sen_name = sen_n , sen_add = sen_a , sen_ph = sen_p ,rec_name = rec_n , rec_add = rec_a , rec_ph = rec_p , t_g = tg, orgin = org, dest = d, pri = p, nodays=shipsd, weight=w,  rej=ro, cost=c, shipid=sid,dd=d1,dm=d2,dy=d3,ddd=d4)
         x.save()
         con=orderss.objects.last()
-        h=con.date.split('-')
+        h=str(con.date)
+        h=h.split('-')
         h2=int(h[2]) #dayofmonth
         h3=int(h[1]) #Month num
         h4=int(h[0]) #Year
