@@ -98,7 +98,7 @@ DATABASES = {
         'USER' : 'wtikehgsaawspm',
         'PASSWORD' : '853d155860e702fdab2725cddd1759b245ed2a0336c0bce80f332a3c25212ee1',
         'TEST' : {
-            'NAME':'deo2h6rl5cjn11',
+            'NAME':'deo2h6rl5cjn11'
 
         }
         
@@ -115,7 +115,7 @@ if os.environ.get('GITHUB_WORKFLOW'):
         'USER' : 'wtikehgsaawspm',
         'PASSWORD' : '853d155860e702fdab2725cddd1759b245ed2a0336c0bce80f332a3c25212ee1',
         'TEST' : {
-            'NAME':'deo2h6rl5cjn11',
+            'NAME':'deo2h6rl5cjn11'
             
         }
     }
