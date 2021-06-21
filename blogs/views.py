@@ -169,7 +169,8 @@ def home(request):
         count=i.id
         l.append(count)
     l.sort()
-    count=l[len(l)-1]
+
+    count=l[-1]
     
     
     return render(request, 'blogs/home.html', {'contexts':contexts,'contextss':contextss,'num':range(1,count+1)})
