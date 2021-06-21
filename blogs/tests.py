@@ -12,7 +12,7 @@ import datetime
 class hello(TestCase):
     def test_page_is_for_shipd_created_successfully(self):
         a1d=datetime.date(2021,6,3)
-        a1=shipd(shipid='Ahamed',shname='MCP-101',shorig='Miami',shdest='Cape Town',shdate=a1d,con_e=0,con_f=0,con_s=0)
+        a1=shipd(shipid= 1,shname='MCP-101',shorig='Miami',shdest='Cape Town',shdate=a1d,con_e=0,con_f=0,con_s=0)
         a1.save()
 
     def test_page_is_for_orderss_created_successfully(self):
@@ -22,7 +22,7 @@ class hello(TestCase):
 
 class urlss(TestCase):
     def test_home(self):
-        response = self.client.get(reverse('blogs-frontship'))
+        response = self.client.get(reverse('blogs-frontships'))
         self.assertEqual(response.status_code, 200)
         response = self.client.get(reverse('blogs-register'))
         self.assertEqual(response.status_code, 200)
