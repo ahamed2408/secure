@@ -94,20 +94,26 @@ if 'test' in sys.argv:
     DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'haisss',
-        'USER': 'postgres',
-        'PASSWORD': '12345',
-        'HOST': 'localhost'
+        'NAME': 'd8irecume0lp11',
+        'USER': 'nkbvzhiqrkzsay',
+        'PASSWORD': 'c1a95bf38b8125412b35d552a67ada6fa16e351c3ebb4e75b72e4c2cdd7a5551',
+        'HOST': '5432',
+        'TEST' : {
+            'NAME': 'd8irecume0lp11',
+        }
     }
 }
     if os.environ.get('GITHUB_WORKFLOW'):        
         DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'haisss',
-            'USER': 'postgres',
-            'PASSWORD': '12345',
-            'HOST': 'localhost'
+            'NAME': 'd8irecume0lp11',
+            'USER': 'nkbvzhiqrkzsay',
+            'PASSWORD': 'c1a95bf38b8125412b35d552a67ada6fa16e351c3ebb4e75b72e4c2cdd7a5551',
+            'HOST': '5432',
+            'TEST' : {
+                'NAME': 'd8irecume0lp11',
+            }
         }
     }
 
