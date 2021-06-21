@@ -159,13 +159,15 @@ def home(request):
     #send_mail(mrs,mrb,'SeaLanes Shipping <noreplysealanes@gmail.com>',['ahamed.irshad24@gmail.com','ashwinkumar.cse_a2017@crescent.education','gregory.cse_a2017@crescent.education'],fail_silently=False,)
     context = {
         'des': orderss.objects.all(),
-        'shi':shipd.objects.all()
+        'shi':shipd.objects.all(),
+        'lastnum':orderss.objects.last()
     }
     contexts=context['des']
     contextss=context['shi']
-    lastnum=orderss.objects.last()
+    a=context['lastnum'].id
     
-    return render(request, 'blogs/home.html', {'contexts':contexts,'contextss':contextss,'num':range(1,100)})
+    
+    return render(request, 'blogs/home.html', {'contexts':contexts,'contextss':contextss,'num':range(1,a+1)})
 
 
 def add(request):
