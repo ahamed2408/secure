@@ -14,10 +14,10 @@ jobs:
     services:
       postgres:
         image: postgres:10.8
-        env:
-          POSTGRES_USER: nkbvzhiqrkzsay
-          POSTGRES_PASSWORD: c1a95bf38b8125412b35d552a67ada6fa16e351c3ebb4e75b72e4c2cdd7a5551
-          POSTGRES_DB: d8irecume0lp11
+        
+        POSTGRES_USER: nkbvzhiqrkzsay
+        POSTGRES_PASSWORD: c1a95bf38b8125412b35d552a67ada6fa16e351c3ebb4e75b72e4c2cdd7a5551
+        POSTGRES_DB: d8irecume0lp11
         ports:
           - 5432:5432
         # needed because the postgres container does not provide a healthcheck
