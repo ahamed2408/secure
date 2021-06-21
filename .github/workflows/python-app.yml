@@ -15,9 +15,9 @@ jobs:
       postgres:
         image: postgres:10.8
         env:
-          POSTGRES_USER: postgres
-          POSTGRES_PASSWORD: 12345
-          POSTGRES_DB: haisss
+          POSTGRES_USER: wtikehgsaawspm
+          POSTGRES_PASSWORD: 853d155860e702fdab2725cddd1759b245ed2a0336c0bce80f332a3c25212ee1
+          POSTGRES_DB: deo2h6rl5cjn11
         ports:
           - 5432:5432
         # needed because the postgres container does not provide a healthcheck
@@ -38,4 +38,4 @@ jobs:
     - name: Run migrations
       run: python manage.py migrate
     - name: Run tests
-      run: python manage.py test 
+      run: python manage.py test --keepdb
