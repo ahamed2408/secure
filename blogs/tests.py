@@ -25,11 +25,16 @@ class hello(TestCase):
 
 class urlss(TestCase):
     def test_home(self):
+        response = self.client.get(reverse('blogs-home'))
+        self.assertEqual(response.status_code, 200)
+        response = self.client.get(reverse('blogs-frontship'))
+        self.assertEqual(response.status_code, 200)
         response = self.client.get(reverse('blogs-register'))
         self.assertEqual(response.status_code, 200)
         response = self.client.get(reverse('blogs-dashboard-2'))
         self.assertEqual(response.status_code, 200)
-
+        response = self.client.get(reverse('blogs-free'))
+        self.assertEqual(response.status_code, 200)
         
 
 
