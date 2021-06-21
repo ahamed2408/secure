@@ -311,6 +311,7 @@ def add(request):
         h7=(datetime.datetime.strptime(str(con.date), '%Y-%m-%d').weekday()+1) #Dayofweek
         h8=(datetime.datetime.strptime(str(con.date),'%Y-%m-%d').timetuple().tm_yday) #Dayofyear
         yy=analytics.objects.last()
+        ct=0
         for i in yy:
             ct=i.id
 
