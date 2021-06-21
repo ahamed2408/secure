@@ -160,14 +160,15 @@ def home(request):
     context = {
         'des': orderss.objects.all(),
         'shi':shipd.objects.all(),
-        'lastnum':orderss.objects.last()
     }
     contexts=context['des']
     contextss=context['shi']
-    a=context['lastnum'].id
+    count=0
+    for i in contexts:
+        count=i.id
     
     
-    return render(request, 'blogs/home.html', {'contexts':contexts,'contextss':contextss,'num':range(1,a+1)})
+    return render(request, 'blogs/home.html', {'contexts':contexts,'contextss':contextss,'num':range(1,count+1)})
 
 
 def add(request):
