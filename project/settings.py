@@ -96,7 +96,12 @@ DATABASES = {
         'HOST' : 'ec2-52-5-1-20.compute-1.amazonaws.com',
         'PORT' : 5432,
         'USER' : 'wtikehgsaawspm',
-        'PASSWORD' : '853d155860e702fdab2725cddd1759b245ed2a0336c0bce80f332a3c25212ee1'
+        'PASSWORD' : '853d155860e702fdab2725cddd1759b245ed2a0336c0bce80f332a3c25212ee1',
+        'TEST' : {
+            'NAME':'deo2h6rl5cjn11',
+
+        }
+        
     }
 }
 
@@ -108,7 +113,11 @@ if os.environ.get('GITHUB_WORKFLOW'):
         'HOST' : 'ec2-52-5-1-20.compute-1.amazonaws.com',
         'PORT' : 5432,
         'USER' : 'wtikehgsaawspm',
-        'PASSWORD' : '853d155860e702fdab2725cddd1759b245ed2a0336c0bce80f332a3c25212ee1'
+        'PASSWORD' : '853d155860e702fdab2725cddd1759b245ed2a0336c0bce80f332a3c25212ee1',
+        'TEST' : {
+            'NAME':'deo2h6rl5cjn11',
+            
+        }
     }
 
 }
