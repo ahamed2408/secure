@@ -142,8 +142,8 @@ def free_ship(request):
             context.save()
 
 
-        return render(request, 'blogs/free.html',{'contextss':contextss,'cd':cd,'num':range(1,49)})
-    return render(request, 'blogs/free.html',{'contextss':contextss,'cd':cd,'num':range(1,49)})
+        return render(request, 'blogs/free.html',{'contextss':contextss,'cd':cd,'num':range(1,50)})
+    return render(request, 'blogs/free.html',{'contextss':contextss,'cd':cd,'num':range(1,50)})
 
 
 
