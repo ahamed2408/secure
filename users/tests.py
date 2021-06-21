@@ -15,9 +15,9 @@ class LogInTest(TestCase):
 
     def test_wrong_username(self):
         response = self.client.post('/login/', {'username': 'wrong', 'password': 'secret'})
-        self.assertFalse(response.data['authenticated'])
+        self.assertFalse(response.context['user'].is_authenticated)
 
     def test_wrong_pssword(self):
         response = self.client.post('/login/', {'username': 'testuser', 'password': 'wrong'})
-        self.assertFalse(response.data['authenticated'])
+        self.assertFalse(response.context['user'].is_authenticated)
 
