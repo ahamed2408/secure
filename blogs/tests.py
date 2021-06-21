@@ -22,7 +22,7 @@ class hello(TestCase):
 
 class urlss(TestCase):
     def test_home(self):
-        response = self.client.get(reverse('blogs-frontships'))
+        response = self.client.get(reverse('blogs-frontship'))
         self.assertEqual(response.status_code, 200)
         response = self.client.get(reverse('blogs-register'))
         self.assertEqual(response.status_code, 200)
