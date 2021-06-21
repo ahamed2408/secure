@@ -328,30 +328,12 @@
                 <div class="row">
                           &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
                           <h6>Your ship ID is {{dess.shipid}}.</h6>  
-                {%if contextss %}
-                    {% for i in contextss %}    
-                    
-                        {% if dess.shipid == i.shipid %}
-                        <h6>&nbsp; It will depart on coming {{i.shday}}.</h6>
-                        {% endif %}
-                        
-                    {% endfor %}
-                {% endif %}
                         
                 </div>
                 {% else %}
                 <div class="row">
                           &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-                          <h6>Capacity is Full. </h6>  
-                {%if contextss %}
-                    {% for i in contextss %}    
-                    
-                        {% if dess.shipid == i.shipid %}
-                        <h6>&nbsp;Try for the next ship on next {{i.shday}}.</h6>
-                        {% endif %}
-                        
-                    {% endfor %}
-                {% endif %}
+                          <h6>Capacity is Full. Try for the next ship. </h6>  
                         
                 </div>
                 {% endif %}
