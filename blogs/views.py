@@ -296,7 +296,9 @@ def add(request):
               
           #  send_mail(mrs,mrb,'SeaLanes Shipping <noreplysealanes@gmail.com>',[se],fail_silently=False,)
         
-        x=orderss(sen_name = sen_n , sen_add = sen_a , sen_ph = sen_p ,rec_name = rec_n , rec_add = rec_a , rec_ph = rec_p , t_g = tg, orgin = org, dest = d, pri = p, nodays=shipsd, weight=w,  rej=ro, cost=c, shipid=sid,dd=d1,dm=d2,dy=d3,ddd=d4)
+        lid=orderss.objects.last()
+        i=lid.id+1
+        x=orderss(id=i,sen_name = sen_n , sen_add = sen_a , sen_ph = sen_p ,rec_name = rec_n , rec_add = rec_a , rec_ph = rec_p , t_g = tg, orgin = org, dest = d, pri = p, nodays=shipsd, weight=w,  rej=ro, cost=c, shipid=sid,dd=d1,dm=d2,dy=d3,ddd=d4)
         x.save()
         con=orderss.objects.last()
         h=str(con.date)
