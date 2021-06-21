@@ -4,8 +4,8 @@ from django.test import TestCase
 class LogInTest(TestCase):
     def setUp(self):
         self.credentials = {
-            'username': 'sealanesss',
-            'password': 'Seauser@123ss'}
+            'username': 'sealanes',
+            'password': 'Seauser@123'}
         User.objects.create_user(**self.credentials)
     def test_login(self):
         # send login data

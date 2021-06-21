@@ -12,11 +12,8 @@ import datetime
 class hello(TestCase):
     def test_page_is_for_shipd_created_successfully(self):
         a1d=datetime.date(2021,6,3)
-        a1=shipd(shipid=1,shname='MCP-101',shorig='Miami',shdest='Cape Town',shdate=a1d,con_e=0,con_f=0,con_s=0)
+        a1=shipd(shipid='Ahamed',shname='MCP-101',shorig='Miami',shdest='Cape Town',shdate=a1d,con_e=0,con_f=0,con_s=0)
         a1.save()
-        a11d=datetime.date(2021,6,3)
-        a11=shipd(shipid=1,shname='MCP-101',shorig='Miami',shdest='Cape Town',shdate=a11d,con_e=0,con_f=0,con_s=0)
-        a11.save()
 
     def test_page_is_for_orderss_created_successfully(self):
         a1d=datetime.date(2021,6,3)
