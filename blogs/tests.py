@@ -37,8 +37,7 @@ class urlss(TestCase):
         self.assertEqual(response.status_code, 200)
         response = self.client.get(reverse('blogs-dashboard-2'))
         self.assertEqual(response.status_code, 200)
-        response = self.client.get(reverse('blogs-free'))
-        self.assertEqual(response.status_code, 200)
+
         
 
 
