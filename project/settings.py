@@ -14,6 +14,7 @@ from pathlib import Path
 import django_heroku
 import dj_database_url
 import os
+import sys
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -88,46 +89,40 @@ WSGI_APPLICATION = 'project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+if 'test' in sys.argv:
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'deo2h6rl5cjn11',
-        'HOST' : 'ec2-52-5-1-20.compute-1.amazonaws.com',
-        'PORT' : 5432,
-        'USER' : 'wtikehgsaawspm',
-        'PASSWORD' : '853d155860e702fdab2725cddd1759b245ed2a0336c0bce80f332a3c25212ee1',
-        'TEST' : {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'haisss',
-        'USER': 'postgres',
-        'PASSWORD': '12345',
-        'HOST': 'localhost',
-        }
-        
-    }
-}
-
-if os.environ.get('GITHUB_WORKFLOW'):
     DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'deo2h6rl5cjn11',
-        'HOST' : 'ec2-52-5-1-20.compute-1.amazonaws.com',
-        'PORT' : 5432,
-        'USER' : 'wtikehgsaawspm',
-        'PASSWORD' : '853d155860e702fdab2725cddd1759b245ed2a0336c0bce80f332a3c25212ee1',
-        'TEST' : {
-        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'haisss',
         'USER': 'postgres',
         'PASSWORD': '12345',
-        'HOST': 'localhost',
-            
+        'HOST': 'localhost'
+    }
+}
+    if os.environ.get('GITHUB_WORKFLOW'):        
+        DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'haisss',
+            'USER': 'postgres',
+            'PASSWORD': '12345',
+            'HOST': 'localhost'
         }
     }
 
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'deo2h6rl5cjn11',
+            'HOST' : 'ec2-52-5-1-20.compute-1.amazonaws.com',
+            'PORT' : 5432,
+            'USER' : 'wtikehgsaawspm',
+            'PASSWORD' : '853d155860e702fdab2725cddd1759b245ed2a0336c0bce80f332a3c25212ee1',          
+        }
+    }
+
 
 
 # Password validation
