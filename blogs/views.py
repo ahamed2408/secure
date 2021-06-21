@@ -164,12 +164,13 @@ def home(request):
     contexts=context['des']
     contextss=context['shi']
     coun=0
-    l=[]
+    love=[]
     for i in contexts:
-        l.append(i.id)
-    l.sort()
+        love.append(i.id)
+    love.sort()
 
-    coun=l[-1]
+    for i in love:
+        coun=i
     
     
     return render(request, 'blogs/home.html', {'contexts':contexts,'contextss':contextss,'num':range(1,coun+1)})
