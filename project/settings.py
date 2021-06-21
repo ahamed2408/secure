@@ -98,7 +98,6 @@ DATABASES = {
         'USER' : 'wtikehgsaawspm',
         'PASSWORD' : '853d155860e702fdab2725cddd1759b245ed2a0336c0bce80f332a3c25212ee1',
         'TEST':{
-            'ENGINE': 'django.db.backends.postgresql',
             'NAME': 'haisss',
             'USER': 'postgres',
             'PASSWORD': '12345',
@@ -117,7 +116,6 @@ if os.environ.get('GITHUB_WORKFLOW'):
         'USER' : 'wtikehgsaawspm',
         'PASSWORD' : '853d155860e702fdab2725cddd1759b245ed2a0336c0bce80f332a3c25212ee1',
         'TEST':{
-            'ENGINE': 'django.db.backends.postgresql',
             'NAME': 'haisss',
             'USER': 'postgres',
             'PASSWORD': '12345',
