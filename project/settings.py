@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'crispy_forms',
     'django_jenkins',
 ]
 
@@ -92,32 +91,13 @@ WSGI_APPLICATION = 'project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'deo2h6rl5cjn11',
-        'HOST' : 'ec2-52-5-1-20.compute-1.amazonaws.com',
+        'NAME': 'd8irecume0lp11',
+        'HOST' : 'ec2-54-145-224-156.compute-1.amazonaws.com',
         'PORT' : 5432,
-        'USER' : 'wtikehgsaawspm',
-        'PASSWORD' : '853d155860e702fdab2725cddd1759b245ed2a0336c0bce80f332a3c25212ee1',
-        'TEST':{
-            'NAME': 'deo2h6rl5cjn11',
-        }
+        'USER' : 'nkbvzhiqrkzsay',
+        'PASSWORD' : 'c1a95bf38b8125412b35d552a67ada6fa16e351c3ebb4e75b72e4c2cdd7a5551',
     }
 }
-
-if os.environ.get('GITHUB_WORKFLOW'):
-    DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'deo2h6rl5cjn11',
-        'HOST' : 'ec2-52-5-1-20.compute-1.amazonaws.com',
-        'PORT' : 5432,
-        'USER' : 'wtikehgsaawspm',
-        'PASSWORD' : '853d155860e702fdab2725cddd1759b245ed2a0336c0bce80f332a3c25212ee1',
-        'TEST':{
-            'NAME': 'deo2h6rl5cjn11',
-        }
-    }
-}
-    
 
 
 # Password validation
