@@ -310,10 +310,14 @@ def add(request):
         h6=(int(datetime.date(int(h[0]),int(h[1]),int(h[2])).strftime("%W"))) #Weekofyear   
         h7=(datetime.datetime.strptime(str(con.date), '%Y-%m-%d').weekday()+1) #Dayofweek
         h8=(datetime.datetime.strptime(str(con.date),'%Y-%m-%d').timetuple().tm_yday) #Dayofyear
-        yy=analytics.objects.last()
+        yy=analytics.objects.all()
         ct=0
+        ml=[]
         for i in yy:
-            ct=i.id
+            ml.append(i.id)
+        ml.sort()
+        for i in ml:
+            ct=i
 
         y=analytics(
             id=ct+1,
