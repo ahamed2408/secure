@@ -23,6 +23,18 @@ class hello(TestCase):
         a1=orderss(sen_name = 'Ahamed' , sen_add = '24/08 Chennai' , sen_ph = '7896541232' ,rec_name = 'Irshad' , rec_add = '24/08 Chennai' , rec_ph = '7896541232' , t_g = 'Eatables', orgin = 'Chennai', dest = 'Osaka', pri = 'Urgent', nodays=2, weight=10,  rej=1, cost=20, shipid=1,dd='04',dm='Month',dy='2021',ddd=a1d)
         a1.save()
 
+class urlss(TestCase):
+    def test_home(self):
+        response = self.client.get(reverse('blogs-home'))
+        self.assertEqual(response.status_code, 200)
+        response = self.client.get(reverse('blogs-frontship'))
+        self.assertEqual(response.status_code, 200)
+        response = self.client.get(reverse('blogs-register'))
+        self.assertEqual(response.status_code, 200)
+        response = self.client.get(reverse('blogs-dashboard-2'))
+        self.assertEqual(response.status_code, 200)
+        response = self.client.get(reverse('blogs-free'))
+        self.assertEqual(response.status_code, 200)
 
 
         
