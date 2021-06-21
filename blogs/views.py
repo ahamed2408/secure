@@ -311,11 +311,12 @@ def add(request):
         h7=(datetime.datetime.strptime(str(con.date), '%Y-%m-%d').weekday()+1) #Dayofweek
         h8=(datetime.datetime.strptime(str(con.date),'%Y-%m-%d').timetuple().tm_yday) #Dayofyear
         yy=analytics.objects.last()
-        a=yy.id
-        a+=1
+        for i in yy:
+            ct=i.id
+
         y=analytics(
-            id=a,
-            OrderID=yy.id+1,
+            id=ct+1,
+            OrderID=ct+1,
             Odate=con.date,
             DayofMonth=h2,
             Month=h3,
