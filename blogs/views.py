@@ -153,7 +153,7 @@ def free_ship(request):
 
 
 def home(request):
-    l4d=datetime.date(2021,6,30)
+    l4d=datetime.date(2021,7,31)
     l4=shipd(shipid=49,shname='OCH-104',shorig='Osaka',shdest='Chennai',shdate=l4d,con_e=0,con_f=0,con_s=0)
     l4.save()
 
