@@ -113,6 +113,9 @@ def free_ship(request):
     contextss=shipd.objects.all()
     cd=date.today()
     cd=str(cd)
+    ct=0
+    for i in contextss:
+        ct+=1
     if request.method=='POST':
 
         shf=request.POST.get('shipid')
@@ -142,14 +145,11 @@ def free_ship(request):
             context.save()
 
 
-        return render(request, 'blogs/free.html',{'contextss':contextss,'cd':cd,'num':range(1,50)})
-    return render(request, 'blogs/free.html',{'contextss':contextss,'cd':cd,'num':range(1,50)})
+        return render(request, 'blogs/free.html',{'contextss':contextss,'cd':cd,'num':range(1,ct+1)})
+    return render(request, 'blogs/free.html',{'contextss':contextss,'cd':cd,'num':range(1,ct+1)})
 
 
 
-
-    
-    return render(request, 'blogs/free.html',{'contextss':contextss,'cd':cd,'num':range(1,49)})
 
 
 def home(request):
