@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+#logo2{ 
+    position:fixed; 
+    top:2; 
+    left:0; 
+  
+  }
+
+.content {
+    max-width: 1000px;
+    margin:left;
+    margin-left:250px;
+    left: 0;
+    padding: 10px;
+  }
+</style>
+	  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+	<title>Supply Chain</title>
+</head>
+<body style="background-color: black;color: white; align-items: center; font-family: Lobster;">
+  <div>
+  <div id="logo2"> 
+    <a class="nav-item nav-link" href="{% url 'blogs-home' %}"> <button type="button" class="btn btn-warning text-dark btn-banner" >GO BACK TO PORTAL</button></a>    
+  </div>   
+  <br>
+  <br> 
+  
+
+  
+   <div class="content" style="align-items: center;">
+      <div>
+        <p><h1 style="font-size: 50px;"> &emsp;&emsp;&emsp;<strong>Sealanes - Predictions & Trends<strong></h1></p><br><br>
+
+        <p><h2>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Existing Trends Over The Past Decade</h2><img src="{% static 'blogs/1EDA.jpg' %}" style="width:1000px;height:300px;"></p><br>
+        <p><h2>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; History & Forecast</h2><img src="{% static 'blogs/2HandF.jpg' %}" style="width:1000px;height:300px;"></p><br>
+        <p><h2>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Trend Over an Year</h2><img src="{% static 'blogs/3Yeart.jpg' %}" style="width:1000px;height:300px;"></p><br>
+        <p><h2>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Trend Over a Week</h2><img src="{% static 'blogs/4WeekT.jpg' %}" style="width:1000px;height:300px;"></p><br>
+        <p><h2>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Forecast for One Year from July 2021</h2><img src="{% static 'blogs/6July2021-2022.jpg' %}" style="width:1000px;height:300px;"></p><br>
+        <p><h2>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Forecast for July 2021</h2><img src="{% static 'blogs/7July2021.jpg' %}" style="width:1000px;height:300px;"></p><br>
+        <p><h2>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Forecast for 2022-2023</h2><img src="{% static 'blogs/82022-2023.jpg' %}" style="width:1000px;height:300px;"></p><br>
+        <p><h2>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Month-wise Revenue for Predicted Period</h2><img src="{% static 'blogs/table.jpg' %}" style="width:1000px;height:300px;"></p><br>
+    </div>
+   </div>
+  </div>
+</body>
+</html>

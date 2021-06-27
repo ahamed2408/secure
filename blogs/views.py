@@ -104,6 +104,9 @@ def registers(request):
 def front(request):
     return render(request, 'blogs/frontship.html')
 
+def prediction(request):
+    return render(request, 'blogs/prediction.html')
+
 
 def dash_two(request):
     return render(request, 'blogs/dashboard-2.html')
