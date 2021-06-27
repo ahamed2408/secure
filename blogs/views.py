@@ -146,6 +146,8 @@ def free_ship(request):
             context.save()
             context.con_s=0
             context.save()
+            
+        contextss=shipd.objects.all()
         return render(request, 'blogs/free.html',{'contextss':contextss,'cd':cd,'num':range(1,ct+1)})
 
 
